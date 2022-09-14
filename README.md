@@ -19,7 +19,7 @@ time fields to a precision of nanoseconds. If you are writing code where all
 date-time fields matter, including the timezone, then this is the preferred
 class that you should implement.
 
-### Constructing a `ZonedDatetime`
+### Constructing a `ZonedDateTime`
 
 Creating a `ZonedDateTime` instance is similar to creating a `LocalDateTime`
 object, except we specify the timezone as well. Consider the following:
