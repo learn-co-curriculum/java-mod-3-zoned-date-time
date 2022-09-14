@@ -146,7 +146,7 @@ import java.time.format.DateTimeFormatter;
 public class ZonedDateTimeExample {
 
     public static void main(String[] args) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss z");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-uuuu HH:mm:ss z");
 
         ZonedDateTime dateTime = ZonedDateTime.of(2015, 10, 21, 19, 28, 0, 0, ZoneId.of("America/Los_Angeles"));
         String formattedDate = formatter.format(dateTime);
@@ -165,7 +165,7 @@ The example above would produce the following result:
 
 Just like the other date-time objects, we can also parse a `ZonedDateTime`
 object using the `parse()` methods. It should be noted that the default format
-for a `ZonedDateTime` instance is yyyy-MM-ddTHH:mmXV. In this format, the T
+for a `ZonedDateTime` instance is uuuu-MM-ddTHH:mmXV. In this format, the T
 separates the date from the time portion of the date-time object and the X and
 V relate to the zone-offset and zone ID respectively.
 
@@ -180,7 +180,7 @@ import java.time.format.DateTimeFormatter;
 public class Example {
 
     public static void main(String[] args) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss z");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-uuuu HH:mm:ss z");
 
         // Parse the String using the default format to obtain an instance of ZonedDateTime
         ZonedDateTime dateTime = ZonedDateTime.parse("1955-11-05T06:15-08:00[America/Los_Angeles]");
